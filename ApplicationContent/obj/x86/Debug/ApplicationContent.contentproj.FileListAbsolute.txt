@@ -1,0 +1,2 @@
+C:\Users\HOME\Desktop\Shano\Software Studies\Personal\Game\GameProject\Application\ApplicationContent\obj\x86\Debug\ApplicationContent.contentprojResolveAssemblyReference.cache
+C:\Software Studies\Personal\Game\GameProject\Application\ApplicationContent\obj\x86\Debug\ApplicationContent.contentprojResolveAssemblyReference.cache

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application.csproj", "{AF33A69C-DFDA-4BD8-83E2-29F03709E495}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationContent", "..\ApplicationContent\ApplicationContent.contentproj", "{DF1987A6-4B83-4A9C-AF23-AD8C25FF2561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF33A69C-DFDA-4BD8-83E2-29F03709E495}.Debug|x86.ActiveCfg = Debug|x86
+		{AF33A69C-DFDA-4BD8-83E2-29F03709E495}.Debug|x86.Build.0 = Debug|x86
+		{AF33A69C-DFDA-4BD8-83E2-29F03709E495}.Release|x86.ActiveCfg = Release|x86
+		{AF33A69C-DFDA-4BD8-83E2-29F03709E495}.Release|x86.Build.0 = Release|x86
+		{DF1987A6-4B83-4A9C-AF23-AD8C25FF2561}.Debug|x86.ActiveCfg = Debug|x86
+		{DF1987A6-4B83-4A9C-AF23-AD8C25FF2561}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

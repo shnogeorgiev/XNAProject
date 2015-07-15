@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Application.Entities.Classes.Entity" Collapsed="true">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAEAAAA=</HashCode>
+      <FileName>Entities\Classes\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.GameObject" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABAAAgAQgQAAAIEAAAAAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.NPC" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\NPC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.Player" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAIAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.Projectile" Collapsed="true">
+    <Position X="9" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.SolidObject" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\SolidObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.MovableObject" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAgAAAAAAAIAAAACAAAAADAAAIAQAIQAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\MovableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application.Entities.Classes.Terrain" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Classes\Terrain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Application.Entities.Classes.MoveDirection">
+    <Position X="11.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgIAAAAAAAAAAAAAAAAAAAAAAAAACACAIAABAAI=</HashCode>
+      <FileName>Entities\Classes\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
