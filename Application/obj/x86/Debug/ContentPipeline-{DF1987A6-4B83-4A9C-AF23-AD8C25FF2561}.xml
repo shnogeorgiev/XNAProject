@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\Graphics\BlueBox.xnb</Output>
+      <Output>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\BlueBox.xnb</Output>
       <Time>2015-07-04T23:15:31.5948193+03:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\Graphics\RedBox.xnb</Output>
+      <Output>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\RedBox.xnb</Output>
       <Time>2015-07-04T17:10:25.6975953+03:00</Time>
     </Item>
     <Item>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\Graphics\Land.xnb</Output>
-      <Time>2015-07-15T12:40:06.888834+03:00</Time>
+      <Output>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\Land.xnb</Output>
+      <Time>2015-07-16T21:13:07.0423212+03:00</Time>
     </Item>
     <Item>
       <Source>Graphics\Laser.png</Source>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\Graphics\Laser.xnb</Output>
+      <Output>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\Laser.xnb</Output>
       <Time>2015-07-15T17:43:35.9594187+03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -44,10 +44,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Software Studies\Personal\Game\GameProject\Application\ApplicationContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Software Studies\Personal\Game\GameProject\Application\Application\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Software Studies\Personal\Game\GameProject\Application\Application\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Software Studies\Personal\Game\GameProject\XNAProject\ApplicationContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

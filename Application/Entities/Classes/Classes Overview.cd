@@ -1,63 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Application.Entities.Classes.Entity" Collapsed="true">
-    <Position X="6" Y="3.75" Width="1.5" />
+  <Class Name="Application.Entities.Classes.Entity">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAEAAAA=</HashCode>
+      <HashCode>AQAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAEAAAg=</HashCode>
       <FileName>Entities\Classes\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.GameObject" Collapsed="true">
-    <Position X="5.75" Y="1.25" Width="1.5" />
+  <Class Name="Application.Entities.Classes.GameObject">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>QAAAAAAABAAAgAQgQAAAIEAAAAAAAgAAAAIAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.NPC" Collapsed="true">
-    <Position X="5.25" Y="5.5" Width="1.5" />
+  <Class Name="Application.Entities.Classes.NPC">
+    <Position X="3.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\NPC.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.Player" Collapsed="true">
-    <Position X="7" Y="5.5" Width="1.5" />
+  <Class Name="Application.Entities.Classes.Player">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAIAAAAgAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.Projectile" Collapsed="true">
-    <Position X="9" Y="3.75" Width="1.5" />
+  <Class Name="Application.Entities.Classes.Projectile">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\Projectile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.SolidObject" Collapsed="true">
-    <Position X="3.5" Y="2.5" Width="1.5" />
+  <Class Name="Application.Entities.Classes.SolidObject">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\SolidObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.MovableObject" Collapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+  <Class Name="Application.Entities.Classes.MovableObject">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAFAgAAAAAAAIAAAACAAAAADAAAIAQAIQAAAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\MovableObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Entities.Classes.Terrain" Collapsed="true">
+  <Class Name="Application.Entities.Classes.Terrain">
     <Position X="3.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Classes\Terrain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Application.Entities.Classes.MoveDirection">
-    <Position X="11.5" Y="0.75" Width="1.5" />
+    <Position X="11.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAgIAAAAAAAAAAAAAAAAAAAAAAAAACACAIAABAAI=</HashCode>
       <FileName>Entities\Classes\Entity.cs</FileName>

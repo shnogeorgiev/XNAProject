@@ -18,6 +18,7 @@ namespace Application.Entities.Classes
     public abstract class Entity : MovableObject
     {
         protected bool isAlive;
+        protected int health;
 
         public Entity()
             : base()
@@ -27,16 +28,23 @@ namespace Application.Entities.Classes
 
             base.width = Constants.EntityDefaultWidth;
             base.height = Constants.EntityDefaultHeight;
+            this.Health = Constants.EntityDefaultHealth;
         }
 
         public bool IsAlive
         {
-            get { return this.IsAlive; }
+            get { return this.isAlive; }
             set { this.isAlive = value; }
         }
 
         public int JumpCount { get; set; }
 
         public bool Falling { get; set; }
+
+        public int Health
+        {
+            get { return this.health; }
+            set { this.health = value; }
+        }
     }
 }

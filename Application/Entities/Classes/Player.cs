@@ -11,19 +11,13 @@ namespace Application.Entities.Classes
 {
     public class Player : Entity
     {
-        private Projectile playerAttack;
-
         public Player()
             : base()
         {
 
         }
 
-        public Projectile PlayerAttack
-        {
-            get { return this.playerAttack; }
-            set { this.playerAttack = value; }
-        }
+        public Projectile PlayerAttack { get; set; }
 
         public void Attack(MoveDirection direction)
         {

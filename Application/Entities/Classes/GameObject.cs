@@ -19,9 +19,12 @@ namespace Application.Entities.Classes
         {
             this.Position = new Vector2();
 
-            CollisionHandler.AllObjects.Add(this);
-            this.objectID = CollisionHandler.ObjectID;
-            CollisionHandler.ObjectID++;
+            ObjectFactory.AllObjects.Add(this);
+            this.objectID = ObjectFactory.ObjectID;
+            ObjectFactory.ObjectID++;
+
+            this.Height = Constants.GameObjectDefaultHeight;
+            this.Width = Constants.GameObjectDefaultWidth;
         }
 
         public Texture2D Texture
@@ -49,6 +52,27 @@ namespace Application.Entities.Classes
         {
             get { return this.objectID; }
             set { this.objectID = value; }
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() == this.GetType())
+            {
+
+                if (obj.GetType().GetProperties().Count() != this.GetType().GetProperties().Count())
+                    return false;
+
+                foreach (var propOne in obj.GetType().GetProperties())
+                {
+                    foreach (var propTwo in this.GetType().GetProperties())
+                    {
+                        if (propOne != propTwo)
+                            return false;
+                    }
+                }
+                return true;
+            }
+            return false;
         }
     }
 }

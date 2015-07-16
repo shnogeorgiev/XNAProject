@@ -16,3 +16,13 @@ C:\Software Studies\Personal\Game\GameProject\Application\Application\obj\x86\De
 C:\Software Studies\Personal\Game\GameProject\Application\Application\obj\x86\Debug\Application.pdb
 C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\Graphics\Land.xnb
 C:\Software Studies\Personal\Game\GameProject\Application\Application\bin\x86\Debug\Content\Graphics\Laser.xnb
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\BlueBox.xnb
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\RedBox.xnb
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\Land.xnb
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Content\Graphics\Laser.xnb
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Application.exe
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\bin\x86\Debug\Application.pdb
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\obj\x86\Debug\Application.csprojResolveAssemblyReference.cache
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\obj\x86\Debug\Application.exe
+C:\Software Studies\Personal\Game\GameProject\XNAProject\Application\obj\x86\Debug\Application.pdb

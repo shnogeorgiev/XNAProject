@@ -22,7 +22,6 @@ namespace Application
 
         public Player PlayerChar;
         public NPC NPCChar;
-
         public Terrain Land;
 
         public GameMenu()
@@ -30,26 +29,30 @@ namespace Application
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
-
+        //Everything is initialized in here.
         protected override void Initialize()
         {
+            Constants.playerDefaultImage = Content.Load<Texture2D>("Graphics\\RedBox");
+            Constants.npcDefaultImage = Content.Load<Texture2D>("Graphics\\BlueBox");
+            Constants.terrainDefaultImage = Content.Load<Texture2D>("Graphics\\Land");
+
             PlayerChar = new Player()
             {
-                Position = new Vector2(200, 200),
-                Texture = Content.Load<Texture2D>("Graphics\\RedBox"),
-                Speed = 2
+                Position = Constants.playerDefaultPosition,
+                Texture = Constants.playerDefaultImage,
+                Speed = Constants.EntityDefaultSpeed
             };
-
             NPCChar = new NPC()
             {
-                Position = new Vector2(600, 200),
-                Texture = Content.Load<Texture2D>("Graphics\\BlueBox")
+                Position = Constants.npcDefaultPosition,
+                Texture = Constants.npcDefaultImage,
+                Speed = Constants.EntityDefaultSpeed
             };
 
             Land = new Terrain()
             {
-                Position = new Vector2(0, 220),
-                Texture = Content.Load<Texture2D>("Graphics\\Land"),
+                Position = Constants.terrainDefaultPosition,
+                Texture = Constants.terrainDefaultImage
             };
 
             collisionHandler = new Util.CollisionHandler();
@@ -67,6 +70,7 @@ namespace Application
 
         protected override void Update(GameTime gameTime)
         {
+
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
             {
                 this.Exit();
@@ -74,6 +78,7 @@ namespace Application
             #region Movement Listener
             else
             {
+                //Limit on the player movement, so the player cannot move out of the window.
                 if (PlayerChar.Position.X < 0)
                 {
                     PlayerChar.Position = new Vector2(PlayerChar.Position.X + 1, PlayerChar.Position.Y);
@@ -92,28 +97,6 @@ namespace Application
                 }
                 else
                 {
-                    //Move Up
-                    /*if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.W))
-                    {
-                        if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
-                            PlayerChar.MoveUpRight();
-                        else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.A))
-                            PlayerChar.MoveUpLeft();
-                        else
-                            PlayerChar.MoveUp();
-                    }*/
-
-                    //Move Down
-                    /*else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.S))
-                    {
-                        if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
-                            PlayerChar.MoveDownRight();
-                        else if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.A))
-                            PlayerChar.MoveDownLeft();
-                        else
-                            PlayerChar.MoveDown();
-                    }*/
-
                     //Jump Method
                     if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Space))
                     {
@@ -132,27 +115,32 @@ namespace Application
                         PlayerChar.MoveRight();
                     }
                     //Attack Methods
-                    else if (Util.CollisionHandler.AllObjects.Count((obj) => obj is Projectile) < 11)
+                    else if (Util.ObjectFactory.AllObjects.Count((obj) => obj is Projectile) < 1)
                     {
                         if (Keyboard.GetState(PlayerIndex.One).GetPressedKeys().Contains(Keys.NumPad4))
                         {
-                            if (!PlayerChar.Falling) PlayerChar.Attack(MoveDirection.Left);
+                            //if (!PlayerChar.Falling) 
+                            PlayerChar.Attack(MoveDirection.Left);
                         }
                         else if (Keyboard.GetState(PlayerIndex.One).GetPressedKeys().Contains(Keys.NumPad6))
                         {
-                            if (!PlayerChar.Falling) PlayerChar.Attack(MoveDirection.Right);
+                            //if (!PlayerChar.Falling) 
+                                PlayerChar.Attack(MoveDirection.Right);
                         }
                         else if (Keyboard.GetState(PlayerIndex.One).GetPressedKeys().Contains(Keys.NumPad8))
                         {
-                            if (!PlayerChar.Falling) PlayerChar.Attack(MoveDirection.Up);
+                            //if (!PlayerChar.Falling) 
+                            PlayerChar.Attack(MoveDirection.Up);
                         }
                         else if (Keyboard.GetState(PlayerIndex.One).GetPressedKeys().Contains(Keys.NumPad9))
                         {
-                            if (!PlayerChar.Falling) PlayerChar.Attack(MoveDirection.UpRight);
+                            //if (!PlayerChar.Falling) 
+                                PlayerChar.Attack(MoveDirection.UpRight);
                         }
                         else if (Keyboard.GetState(PlayerIndex.One).GetPressedKeys().Contains(Keys.NumPad7))
                         {
-                            if (!PlayerChar.Falling) PlayerChar.Attack(MoveDirection.UpLeft);
+                            //if (!PlayerChar.Falling) 
+                                PlayerChar.Attack(MoveDirection.UpLeft);
                         }
                     }
                 }
@@ -168,17 +156,17 @@ namespace Application
                 }
             }
             #endregion
-
             collisionHandler.EntityCollisionCheck();
             base.Update(gameTime);
         }
 
+        // Method for drawing the objects
         protected override void Draw(GameTime gameTime)
         {
+            ObjectFactory.GenerateEnemies();
             spriteBatch.Begin();
             List<GameObject> objectsForRemoval = new List<GameObject>();
-
-            foreach (GameObject obj in CollisionHandler.AllObjects)
+            foreach (GameObject obj in ObjectFactory.AllObjects)
             {
                 if (obj is Projectile)
                 {
@@ -191,12 +179,29 @@ namespace Application
                         objectsForRemoval.Add(obj);
                 }
 
+                else if (obj is Entity)
+                {
+                    if (!(obj as Entity).IsAlive  || 
+                        (obj as Entity).Position.X < 0 ||
+                        (obj as Entity).Position.Y < 0 ||
+                        (obj as Entity).Position.X > graphics.PreferredBackBufferWidth ||
+                        (obj as Entity).Position.Y > graphics.PreferredBackBufferHeight)
+                    {
+                        objectsForRemoval.Add(obj);
+                        continue;
+                    }
+                    if (obj is NPC)
+                    {
+                        (obj as NPC).MoveLeft();
+                    }
+                }
 
                 spriteBatch.Draw(obj.Texture, obj.Position, Color.White);
+
             }
             foreach (GameObject obj in objectsForRemoval)
             {
-                CollisionHandler.AllObjects.RemoveAll(projectile => obj.ID == projectile.ID);
+                ObjectFactory.AllObjects.RemoveAll(projectile => obj.ID == projectile.ID);
             }
 
             spriteBatch.End();

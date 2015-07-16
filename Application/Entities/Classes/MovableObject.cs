@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Application.Util;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Application.Entities.Classes
         public MovableObject()
             : base()
         {
-            this.Speed = 10;
+
         }
         public int Speed
         {

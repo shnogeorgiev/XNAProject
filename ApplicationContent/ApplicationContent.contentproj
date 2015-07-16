@@ -44,15 +44,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Graphics\Land.png">
-      <Name>Land</Name>
+    <Compile Include="Graphics\Laser.png">
+      <Name>Laser</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Graphics\Laser.png">
-      <Name>Laser</Name>
+    <Compile Include="Graphics\Land.png">
+      <Name>Land</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

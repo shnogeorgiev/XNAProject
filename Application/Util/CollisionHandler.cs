@@ -9,57 +9,58 @@ namespace Application.Util
 {
     public class CollisionHandler
     {
-        public static int ObjectID = 0;
-        public static List<GameObject> AllObjects = new List<GameObject>();
-
+        /// <summary>
+        /// The methods inside this class are executed at every loop of the game.
+        /// This class is suitable for writing and keeping logic about collision or mechanics.
+        /// </summary>
         public void EntityCollisionCheck()
         {
             //Gravity Check
-            foreach (GameObject entity in AllObjects)
+            foreach (GameObject a in ObjectFactory.AllObjects)
             {
-                if (entity is Player)
+                if (a is Player)
                 {
-                    foreach (GameObject obj in AllObjects)
+                    foreach (GameObject b in ObjectFactory.AllObjects)
                     {
-                        if (obj is Terrain)
+                        if (b is Terrain)
                         {
-                            if (entity.Position.Y + 1 + entity.Height >= obj.Position.Y) (entity as Entity).Falling = false;
-                            else (entity as Entity).Falling = true;
+                            if (a.Position.Y + 1 + a.Height >= b.Position.Y) (a as Entity).Falling = false;
+                            else (a as Entity).Falling = true;
                         }
                     }
                 }
             }
 
             //Projectile Movement
-            foreach (GameObject obj in AllObjects)
+            foreach (GameObject a in ObjectFactory.AllObjects)
             {
-                if (obj is Projectile)
+                if (a is Projectile)
                 {
-                    switch ((obj as Projectile).Direction)
+                    switch ((a as Projectile).Direction)
                     {
                         case MoveDirection.Left:
-                            (obj as Projectile).MoveLeft();
+                            (a as Projectile).MoveLeft();
                             break;
                         case MoveDirection.Right:
-                            (obj as Projectile).MoveRight();
+                            (a as Projectile).MoveRight();
                             break;
                         case MoveDirection.Up:
-                            (obj as Projectile).MoveUp();
+                            (a as Projectile).MoveUp();
                             break;
                         case MoveDirection.UpRight:
-                            (obj as Projectile).MoveUpRight();
+                            (a as Projectile).MoveUpRight();
                             break;
                         case MoveDirection.UpLeft:
-                            (obj as Projectile).MoveUpLeft();
+                            (a as Projectile).MoveUpLeft();
                             break;
                     }
                 }
             }
             
             //Collision Handling for the Player
-            foreach (GameObject a in AllObjects)
+            foreach (GameObject a in ObjectFactory.AllObjects)
             {
-                foreach (GameObject b in AllObjects)
+                foreach (GameObject b in ObjectFactory.AllObjects)
                 {
                     if (a.Position.X < b.Position.X + b.Width &&
                         a.Position.X + a.Width > b.Position.X &&
@@ -110,6 +111,18 @@ namespace Application.Util
                         return true;
                 }
                 return false;
+            }
+            else if (a is Projectile)
+            {
+                if (b is Entity)
+                {
+                    if (b is NPC)
+                    {
+                        (b as Entity).Health -= (a as Projectile).Damage;
+                        if ((b as Entity).Health <= 0) (b as Entity).IsAlive = false;
+                        return true;
+                    }
+                }
             }
             return false;
         }
