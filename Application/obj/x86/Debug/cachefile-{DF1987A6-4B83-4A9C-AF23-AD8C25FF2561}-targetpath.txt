@@ -1,4 +1,0 @@
-Content\Graphics\BlueBox.xnb
-Content\Graphics\RedBox.xnb
-Content\Graphics\Land.xnb
-Content\Graphics\Laser.xnb
