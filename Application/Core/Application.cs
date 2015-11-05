@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+
 using Application.Core;
+using Application.Core.Enumerations;
+
 using Application.Interfaces;
+using Application.Objects.MoveableObjects.Entities;
 using Application.Objects;
-using Application.Objects.Entities;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -76,10 +80,13 @@ namespace Application
             Constants.MindlessCorpseUp = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\Mindless_Corpse_Up");
             Constants.MindlessCorpseDown = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\Mindless_Corpse_Down");
 
-            Constants.InfestedHumanCorpseLeft = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Left");
-            Constants.InfestedHumanCorpseRight = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Right");
+            Constants.InfestedHumanCorpseLeft =
+                Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Left");
+            Constants.InfestedHumanCorpseRight =
+                Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Right");
             Constants.InfestedHumanCorpseUp = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Up");
-            Constants.InfestedHumanCorpseDown = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Down");
+            Constants.InfestedHumanCorpseDown =
+                Content.Load<Texture2D>("Graphics\\EnemyCorpses\\InfestedHuman_Corpse_Down");
 
             Constants.GladiatorCorpseLeft = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\Gladiator_Corpse_Left");
             Constants.GladiatorCorpseRight = Content.Load<Texture2D>("Graphics\\EnemyCorpses\\Gladiator_Corpse_Right");
@@ -94,45 +101,119 @@ namespace Application
 
             ObjectFactory.DeadObjectsInfo = new List<object>()
             {
-                {new {type = EnemyType.Zombie, direction = MoveDirection.Left, texture = Constants.ZombieCorpseLeft}},
-                {new {type = EnemyType.Zombie, direction = MoveDirection.Right, texture = Constants.ZombieCorpseRight}},
+                {new {type = EnemyType.Zombie, direction = MoveDirection.Left, texture = Constants.ZombieCorpseRight}},
+                {new {type = EnemyType.Zombie, direction = MoveDirection.Right, texture = Constants.ZombieCorpseLeft}},
                 {new {type = EnemyType.Zombie, direction = MoveDirection.Up, texture = Constants.ZombieCorpseDown}},
                 {new {type = EnemyType.Zombie, direction = MoveDirection.Down, texture = Constants.ZombieCorpseUp}},
 
-                {new {type = EnemyType.Ghoul, direction = MoveDirection.Left, texture = Constants.GhoulCorpseLeft}},
-                {new {type = EnemyType.Ghoul, direction = MoveDirection.Right, texture = Constants.GhoulCorpseRight}},
+                {new {type = EnemyType.Ghoul, direction = MoveDirection.Left, texture = Constants.GhoulCorpseRight}},
+                {new {type = EnemyType.Ghoul, direction = MoveDirection.Right, texture = Constants.GhoulCorpseLeft}},
                 {new {type = EnemyType.Ghoul, direction = MoveDirection.Up, texture = Constants.GhoulCorpseDown}},
                 {new {type = EnemyType.Ghoul, direction = MoveDirection.Down, texture = Constants.GhoulCorpseUp}},
-                
-                {new {type = EnemyType.Skeleton, direction = MoveDirection.Left, texture = Constants.SkeletonCorpseLeft}},
-                {new {type = EnemyType.Skeleton, direction = MoveDirection.Right, texture = Constants.SkeletonCorpseRight}},
+
+                {
+                    new
+                    {
+                        type = EnemyType.Skeleton,
+                        direction = MoveDirection.Left,
+                        texture = Constants.SkeletonCorpseRight
+                    }
+                },
+                {
+                    new
+                    {
+                        type = EnemyType.Skeleton,
+                        direction = MoveDirection.Right,
+                        texture = Constants.SkeletonCorpseLeft
+                    }
+                },
                 {new {type = EnemyType.Skeleton, direction = MoveDirection.Up, texture = Constants.SkeletonCorpseDown}},
                 {new {type = EnemyType.Skeleton, direction = MoveDirection.Down, texture = Constants.WarriorCorpseUp}},
-               
-                {new {type = EnemyType.Warrior, direction = MoveDirection.Left, texture = Constants.WarriorCorpseLeft}},
-                {new {type = EnemyType.Warrior, direction = MoveDirection.Right, texture = Constants.WarriorCorpseRight}},
+
+                {new {type = EnemyType.Warrior, direction = MoveDirection.Left, texture = Constants.WarriorCorpseRight}},
+                {new {type = EnemyType.Warrior, direction = MoveDirection.Right, texture = Constants.WarriorCorpseLeft}},
                 {new {type = EnemyType.Warrior, direction = MoveDirection.Up, texture = Constants.WarriorCorpseDown}},
                 {new {type = EnemyType.Warrior, direction = MoveDirection.Down, texture = Constants.WarriorCorpseUp}},
-                
-                {new {type = EnemyType.Butcher, direction = MoveDirection.Left, texture = Constants.ButcherCorpseLeft}},
-                {new {type = EnemyType.Butcher, direction = MoveDirection.Right, texture = Constants.ButcherCorpseRight}},
+
+                {new {type = EnemyType.Butcher, direction = MoveDirection.Left, texture = Constants.ButcherCorpseRight}},
+                {new {type = EnemyType.Butcher, direction = MoveDirection.Right, texture = Constants.ButcherCorpseLeft}},
                 {new {type = EnemyType.Butcher, direction = MoveDirection.Up, texture = Constants.ButcherCorpseDown}},
                 {new {type = EnemyType.Butcher, direction = MoveDirection.Down, texture = Constants.ButcherCorpseUp}},
-                
-                {new {type = EnemyType.Mindless, direction = MoveDirection.Left, texture = Constants.MindlessCorpseLeft}},
-                {new {type = EnemyType.Mindless, direction = MoveDirection.Right, texture = Constants.MindlessCorpseRight}},
+
+                {
+                    new
+                    {
+                        type = EnemyType.Mindless,
+                        direction = MoveDirection.Left,
+                        texture = Constants.MindlessCorpseRight
+                    }
+                },
+                {
+                    new
+                    {
+                        type = EnemyType.Mindless,
+                        direction = MoveDirection.Right,
+                        texture = Constants.MindlessCorpseLeft
+                    }
+                },
                 {new {type = EnemyType.Mindless, direction = MoveDirection.Up, texture = Constants.MindlessCorpseDown}},
                 {new {type = EnemyType.Mindless, direction = MoveDirection.Down, texture = Constants.MindlessCorpseUp}},
-                
-                {new {type = EnemyType.InfestedHuman, direction = MoveDirection.Left, texture = Constants.InfestedHumanCorpseLeft}},
-                {new {type = EnemyType.InfestedHuman, direction = MoveDirection.Right, texture = Constants.InfestedHumanCorpseRight}},
-                {new {type = EnemyType.InfestedHuman, direction = MoveDirection.Up, texture = Constants.InfestedHumanCorpseDown}},
-                {new {type = EnemyType.InfestedHuman, direction = MoveDirection.Down, texture = Constants.InfestedHumanCorpseUp}},
-                
-                {new {type = EnemyType.Gladiator, direction = MoveDirection.Left,texture = Constants.GladiatorCorpseLeft}},
-                {new {type = EnemyType.Gladiator, direction = MoveDirection.Right, texture = Constants.GladiatorCorpseRight}},
-                {new {type = EnemyType.Gladiator, direction = MoveDirection.Up,texture = Constants.GladiatorCorpseDown}},
-                {new {type = EnemyType.Gladiator, direction = MoveDirection.Down, texture = Constants.GladiatorCorpseUp}}
+
+                {
+                    new
+                    {
+                        type = EnemyType.InfestedHuman,
+                        direction = MoveDirection.Left,
+                        texture = Constants.InfestedHumanCorpseRight
+                    }
+                },
+                {
+                    new
+                    {
+                        type = EnemyType.InfestedHuman,
+                        direction = MoveDirection.Right,
+                        texture = Constants.InfestedHumanCorpseLeft
+                    }
+                },
+                {
+                    new
+                    {
+                        type = EnemyType.InfestedHuman,
+                        direction = MoveDirection.Up,
+                        texture = Constants.InfestedHumanCorpseDown
+                    }
+                },
+                {
+                    new
+                    {
+                        type = EnemyType.InfestedHuman,
+                        direction = MoveDirection.Down,
+                        texture = Constants.InfestedHumanCorpseUp
+                    }
+                },
+
+                {
+                    new
+                    {
+                        type = EnemyType.Gladiator,
+                        direction = MoveDirection.Left,
+                        texture = Constants.GladiatorCorpseRight
+                    }
+                },
+                {
+                    new
+                    {
+                        type = EnemyType.Gladiator,
+                        direction = MoveDirection.Right,
+                        texture = Constants.GladiatorCorpseLeft
+                    }
+                },
+                {
+                    new {type = EnemyType.Gladiator, direction = MoveDirection.Up, texture = Constants.GladiatorCorpseDown}
+                },
+                {
+                    new {type = EnemyType.Gladiator, direction = MoveDirection.Down, texture = Constants.GladiatorCorpseUp}
+                }
             };
 
         }
@@ -214,10 +295,9 @@ namespace Application
             ObjectFactory.AllObjects.ForEach(gameobj =>
             {
                 gameobj.Update(gameTime);
-                gameobj.Draw(spriteBatch);
+                gameobj.Draw(spriteBatch, gameobj.ColorType);
             });
             spriteBatch.End();
-
             base.Draw(gameTime);
         }
     }

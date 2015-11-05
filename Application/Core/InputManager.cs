@@ -1,6 +1,7 @@
 ﻿using System.Linq;
+using Application.Core.Enumerations;
 using Application.Objects;
-using Application.Objects.Entities;
+using Application.Objects.MoveableObjects.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
@@ -173,7 +174,11 @@ namespace Application.Core
                                 break;
                         }
                     }
-                    if (targetFound) break;
+                    if (targetFound)
+                    {
+                        npc.ColorType = Color.Red;
+                        break;
+                    }
                 }
             }
             else

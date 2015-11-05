@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Application.Core.Enumerations;
 using Application.Objects;
-using Application.Objects.Entities;
+using Application.Objects.MoveableObjects.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -84,7 +85,7 @@ namespace Application.Core
                             enemyType = EnemyType.Warrior;
                             break;
                         case 4:
-                            enemyType = EnemyType.Butcher;
+                            //enemyType = EnemyType.Butcher;
                             break;
                         case 5:
                             enemyType = EnemyType.Mindless;

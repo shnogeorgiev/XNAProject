@@ -72,9 +72,9 @@ namespace Application.Core
             this.SourceRect = new Rectangle((int)this.CurrentFrame.X, (int)this.CurrentFrame.Y, this.FrameWidth, this.FrameHeight);
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, Color color)
         {
-            spriteBatch.Draw(this.Image, this.Position, this.SourceRect, Color.White);
+            spriteBatch.Draw(this.Image, this.Position, this.SourceRect, color);
         }
     }
 }

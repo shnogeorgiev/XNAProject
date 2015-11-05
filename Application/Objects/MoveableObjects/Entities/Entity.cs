@@ -3,7 +3,7 @@ using Application.Interfaces;
 using Application.Objects.MoveableObjects;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Application.Objects.Entities
+namespace Application.Objects.MoveableObjects.Entities
 {
     public abstract class Entity : MoveableObject, IEntity
     {

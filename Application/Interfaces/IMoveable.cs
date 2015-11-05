@@ -1,4 +1,5 @@
 ﻿using Application.Core;
+using Application.Core.Enumerations;
 
 namespace Application.Interfaces
 {

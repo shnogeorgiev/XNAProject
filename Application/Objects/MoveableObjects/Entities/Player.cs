@@ -1,10 +1,11 @@
 ﻿using Application.Core;
+using Application.Core.Enumerations;
 using Application.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Application.Objects.Entities
+namespace Application.Objects.MoveableObjects.Entities
 {
 
     public class Player : Entity

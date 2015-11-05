@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Software Studies/Personal/WindowsGame/Application/Application/Content/Graphics/EnemyCorpses/Mindless_Corpse_Down.png</SourceFile>
+  <SourceFile>C:/Software Studies/Personal/WindowsGame/XNAProject/Application/Content/Graphics/EnemyCorpses/Mindless_Corpse_Down.png</SourceFile>
   <SourceTime>2015-11-01T19:05:08+02:00</SourceTime>
-  <DestFile>C:/Software Studies/Personal/WindowsGame/Application/Application/Content/bin/Windows/Graphics/EnemyCorpses/Mindless_Corpse_Down.xnb</DestFile>
-  <DestTime>2015-11-01T22:56:07.4176051+02:00</DestTime>
+  <DestFile>C:/Software Studies/Personal/WindowsGame/XNAProject/Application/Content/bin/Windows/Graphics/EnemyCorpses/Mindless_Corpse_Down.xnb</DestFile>
+  <DestTime>2015-11-04T07:13:36.6649707+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-04-29T20:14:44+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

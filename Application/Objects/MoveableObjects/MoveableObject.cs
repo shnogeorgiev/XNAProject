@@ -1,4 +1,5 @@
 ﻿using Application.Core;
+using Application.Core.Enumerations;
 using Application.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;

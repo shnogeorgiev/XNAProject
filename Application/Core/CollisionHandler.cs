@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
+using Application.Core.Enumerations;
 using Application.Interfaces;
 using Application.Objects;
-using Application.Objects.Entities;
+using Application.Objects.MoveableObjects.Entities;
 using Microsoft.Xna.Framework;
 
 namespace Application.Core

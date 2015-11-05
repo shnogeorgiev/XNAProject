@@ -46,13 +46,13 @@
     <Compile Include="Core\CollisionHandler.cs" />
     <Compile Include="Core\Constants.cs" />
     <Compile Include="Core\InputManager.cs" />
-    <Compile Include="Core\MoveDirection.cs" />
+    <Compile Include="Core\Enumerations\MoveDirection.cs" />
     <Compile Include="Core\ObjectFactory.cs" />
-    <Compile Include="Core\EnemyType.cs" />
-    <Compile Include="Objects\Entities\Entity.cs" />
+    <Compile Include="Core\Enumerations\EnemyType.cs" />
+    <Compile Include="Objects\MoveableObjects\Entities\Entity.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="Objects\Entities\NPC.cs" />
-    <Compile Include="Objects\Entities\Player.cs" />
+    <Compile Include="Objects\MoveableObjects\Entities\NPC.cs" />
+    <Compile Include="Objects\MoveableObjects\Entities\Player.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Objects\GameObject.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
@@ -61,7 +61,7 @@
     <Compile Include="Objects\MoveableObjects\MoveableObject.cs" />
     <Compile Include="Core\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Core\WeaponType.cs" />
+    <Compile Include="Core\Enumerations\WeaponType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

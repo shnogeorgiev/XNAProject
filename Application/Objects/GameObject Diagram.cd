@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Application.Objects.Entities.Entity" Collapsed="true">
+  <Class Name="Application.Objects.MoveableObjects.Entities.Entity" Collapsed="true">
     <Position X="4" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Objects\Entities\Entity.cs</FileName>
+      <FileName>Objects\MoveableObjects\Entities\Entity.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Application.Objects.Entities.NPC" Collapsed="true">
+  <Class Name="Application.Objects.MoveableObjects.Entities.NPC" Collapsed="true">
     <Position X="3.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAIQQAAAAAAAAA=</HashCode>
-      <FileName>Objects\Entities\NPC.cs</FileName>
+      <FileName>Objects\MoveableObjects\Entities\NPC.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Application.Objects.Entities.Player" Collapsed="true">
+  <Class Name="Application.Objects.MoveableObjects.Entities.Player" Collapsed="true">
     <Position X="5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAUQAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
-      <FileName>Objects\Entities\Player.cs</FileName>
+      <HashCode>AAUQAAAQAAAAAAAAAAAAAAAAAAAAAAgIQAAAAAAAAAA=</HashCode>
+      <FileName>Objects\MoveableObjects\Entities\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Application.Objects.GameObject" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACQQAAAAAAAAAgAgAAAAAAAAAAAAIAAAAAIAAAAAAgA=</HashCode>
+      <HashCode>ACQQAAAAAAAAAgAgAAAAAAAAAAAAIAABAAIAAAAAAgA=</HashCode>
       <FileName>Objects\GameObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

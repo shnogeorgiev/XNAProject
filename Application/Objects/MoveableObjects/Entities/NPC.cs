@@ -1,10 +1,11 @@
 ﻿using System;
 using Application.Core;
+using Application.Core.Enumerations;
 using Application.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Application.Objects.Entities
+namespace Application.Objects.MoveableObjects.Entities
 {
     public class NPC : Entity
     {
